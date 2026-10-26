@@ -20,7 +20,7 @@ class ClaudeMultipass < Formula
       fzf is optional: `brew install fzf` enables the picker (a bare `claude-multipass`).
       Raycast script commands: copy them to a folder you own first, since this path
       changes on every upgrade and the macOS picker hides /opt:
-        cp -R #{pkgshare}/raycast ~/.config/claude-multipass/raycast
+        mkdir -p ~/.config/claude-multipass/raycast && cp -R #{pkgshare}/raycast/. ~/.config/claude-multipass/raycast
       then add ~/.config/claude-multipass/raycast under Raycast's Script Commands
       settings (Cmd+Shift+G in the picker).
     EOS
