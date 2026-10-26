@@ -1,5 +1,5 @@
 class ClaudeMultipass < Formula
-  desc "Switch Claude Desktop between claude.ai accounts and keep every account's Code sessions"
+  desc "Switch Claude Desktop between claude.ai accounts without an email code"
   homepage "https://github.com/jrmatherly/claude-multipass"
   url "https://github.com/jrmatherly/claude-multipass/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "f4ba18f7f1af5aa43dc8ff8d8d9725db607bc1531f1e29602725ab93b06cef0d"
