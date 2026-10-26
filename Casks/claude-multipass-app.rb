@@ -9,7 +9,7 @@ cask "claude-multipass-app" do
 
   depends_on formula: "jrmatherly/tap/claude-multipass"
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Claude Multipass.app"
 
