@@ -1,6 +1,6 @@
 cask "claude-multipass-app" do
-  version "0.7.0"
-  sha256 "26fb402acae06d58ca10abaa510e8f15294e74fa85f9455b5165738d8b58866d"
+  version "0.8.0"
+  sha256 "4535dfba2f4b2ab6ed254bfb0806ac12da86b6040d681594bcd56a093a9aea41"
 
   url "https://github.com/jrmatherly/claude-multipass/releases/download/v#{version}/claude-multipass-app_#{version}_arm64.dmg"
   name "Claude Multipass"
