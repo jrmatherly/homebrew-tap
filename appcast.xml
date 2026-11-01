@@ -3,10 +3,15 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.10.0</title>
-      <sparkle:version>0.10.0</sparkle:version>
+      <title>0.10.1</title>
+      <sparkle:version>0.10.1</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.10.1 (2026-11-01)
+
+- The app and the tool work as in 0.10.0. This is the first version 0.10.0 can install by itself, from Check now and Update and relaunch in Settings, About.
+- The release build tries a signature again when Apple's timestamp service returns none, and says why when the Keychain lookup or the notarization submission fails.
 
 ## 0.10.0 (2026-11-01)
 
@@ -151,7 +156,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.10.0/claude-multipass-app_0.10.0_arm64.dmg" length="3749689" type="application/octet-stream" sparkle:edSignature="ZMh2k5HV4h5R+tJ6p9+vxhUvgRAfhqWhKS6wEHFSRl5gStOPTTgqL+gH/GWSKtWRMP1YttwuvcdT4kDOkfOmBg=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.10.1/claude-multipass-app_0.10.1_arm64.dmg" length="3749816" type="application/octet-stream" sparkle:edSignature="LRtiB4/L25cti52NZJzQj9vCF3rDc1wuntUF71VNuM0rLS/O93/9Rpn8bUJ7zQVph2NJp3jyAsv6+YinlDndCg=="/>
     </item>
   </channel>
 </rss>
