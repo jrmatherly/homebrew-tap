@@ -3,10 +3,14 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.10.1</title>
-      <sparkle:version>0.10.1</sparkle:version>
+      <title>0.10.2</title>
+      <sparkle:version>0.10.2</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.10.2 (2026-11-01)
+
+- A warning a switch or save leaves in the popover clears on Refresh, and when you close a popover that opened on it. Desktop takes focus and closes the popover just after a switch, so a warning that arrives then shows at the next open. It describes the moment of the switch, such as a Claude Code process that has since quit, and used to stay until the next switch.
 
 ## 0.10.1 (2026-11-01)
 
@@ -156,7 +160,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.10.1/claude-multipass-app_0.10.1_arm64.dmg" length="3749816" type="application/octet-stream" sparkle:edSignature="LRtiB4/L25cti52NZJzQj9vCF3rDc1wuntUF71VNuM0rLS/O93/9Rpn8bUJ7zQVph2NJp3jyAsv6+YinlDndCg=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.10.2/claude-multipass-app_0.10.2_arm64.dmg" length="3750601" type="application/octet-stream" sparkle:edSignature="1ASc4AiaPltTRHTsEqV/r5kvEk2cKvsHuItxsAKQBuqTRE1XxgXrMv1Namqy+eYoa57+PiHGD02MGUOOYoC3BA=="/>
     </item>
   </channel>
 </rss>
