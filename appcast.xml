@@ -3,10 +3,16 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.10.2</title>
-      <sparkle:version>0.10.2</sparkle:version>
+      <title>0.11.0</title>
+      <sparkle:version>0.11.0</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.11.0 (2026-11-02)
+
+- An LLM Router (LLMR) profile can be saved and switched to like an account. `save <name> --llmr <llmr-profile>` writes only that profile's `meta.json`, with no Desktop quit and no Keychain read; with `--force` over a claude.ai profile, that profile moves to the backups and its CLI login item is deleted. `switch <name>` re-saves the login you leave, quits Desktop and runs `llmr <llmr-profile> app` instead of relaunching. If that fails, or no LLMR Desktop appears within 10 s, Desktop relaunches on the claude.ai login and the switch exits 1. Switching away relaunches the claude.ai login, also when it is the account the Desktop folder still holds. `current`, `list` and `list --json` name the saved LLMR profile while its Desktop runs, and `current` and the text `list` say `gateway not running` when LLMR does not answer. `list --json` adds `kind` and `llmrProfile`. `doctor` warns when an LLMR profile is saved and `llmr` cannot be found. `usage` skips LLMR profiles. The menu bar shows the row with the hint `terminal: run llmr <llmr-profile>` and no usage meter, and shows no usage or plan line while it is signed in. `llmr <llmr-profile>` uses your `~/.claude` when that LLMR profile has "Use my ~/.claude in the terminal" (`claudeCodeSharedHome`) on, in llm-router after v7.1.1. Otherwise it uses a blank Claude home.
+
+- A Claude Code login that Claude Code itself cleared (both tokens empty, which it does to a login the server rejected) counts as signed out. `save` and the re-save on a switch warn `Claude Code cleared its login; switch to <name>, run claude auth login, then save <name>` and keep the profile's saved CLI login, and a `switch` to the same account restores the saved login instead of keeping the cleared one.
 
 ## 0.10.2 (2026-11-01)
 
@@ -160,7 +166,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.10.2/claude-multipass-app_0.10.2_arm64.dmg" length="3750601" type="application/octet-stream" sparkle:edSignature="1ASc4AiaPltTRHTsEqV/r5kvEk2cKvsHuItxsAKQBuqTRE1XxgXrMv1Namqy+eYoa57+PiHGD02MGUOOYoC3BA=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.11.0/claude-multipass-app_0.11.0_arm64.dmg" length="3480666" type="application/octet-stream" sparkle:edSignature="+Glr0du1l0qKkJ8AXnwG58yMDmPpdoybfZKCWKsuXsj2PaantTTSXjoM9+4pPpaaOZ4OA//vFI2/lL5Em67+Dw=="/>
     </item>
   </channel>
 </rss>
