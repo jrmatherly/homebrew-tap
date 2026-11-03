@@ -3,10 +3,17 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.12.0</title>
-      <sparkle:version>0.12.0</sparkle:version>
+      <title>0.13.0</title>
+      <sparkle:version>0.13.0</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.13.0 (2026-11-03)
+
+- Every relaunch of Desktop now uses the environment a Dock launch gets, so nothing from your terminal or the menu bar app, `CLAUDE_MULTIPASS_DEBUG` included, reaches Desktop or the sessions it spawns. An LLMR launch keeps the caller's environment and drops only that variable.
+- A relaunch of Desktop that fails now warns `Claude did not relaunch; open it by hand` and keeps the run's exit code, so a switch that worked is not reported as failed and its locks are freed.
+- The debug watch now says what happened to the CLI login and what to do: it was cleared, it went back to another account, or its token changed. It names saved profiles instead of account ids.
+- The popover now says which account the terminal is on, from `oauthAccount` in `~/.claude.json`, in place of "terminal login too", which only meant the profile held a saved login. It reads "terminal on this account", `terminal on <name>` or "terminal on another account". `list --json` has a new `cliAccount` field.
 
 ## 0.12.0 (2026-11-02)
 
@@ -172,7 +179,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.12.0/claude-multipass-app_0.12.0_arm64.dmg" length="3769392" type="application/octet-stream" sparkle:edSignature="ny3QvaQKD+KLKJo2FjxNUm31hFQHcmJA9l3rvUuJxn3p1SAK12j35t4qYwZh/7qZTu6kRYsks7sPTdVPdwpcAQ=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.13.0/claude-multipass-app_0.13.0_arm64.dmg" length="3772717" type="application/octet-stream" sparkle:edSignature="woTOiB3WJ8X3nt4m6T06HNC9+d8UgY3ZI7gq34QBIaQC4kuwAo6d40RWVuM4kLguBG2JEL1LW6HzquUhFmD4BQ=="/>
     </item>
   </channel>
 </rss>
