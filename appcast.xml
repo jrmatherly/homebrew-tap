@@ -3,10 +3,17 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.13.0</title>
-      <sparkle:version>0.13.0</sparkle:version>
+      <title>0.14.0</title>
+      <sparkle:version>0.14.0</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.14.0 (2026-11-03)
+
+- `doctor` now warns when `~/.claude/.credentials.json` exists. Claude Code reads that file when the Keychain has no item or is locked, and a switch does not move it.
+- `doctor` now names every documented login override, not only `ANTHROPIC_API_KEY` and `CLAUDE_CODE_OAUTH_TOKEN`. `--help` lists them.
+- A user name with a space or another character Claude Code rejects no longer strands the terminal login. The tool now writes the Keychain item Claude Code reads for that name, `claude-code-user`.
+- `usage` now tells a lapsed token from a refused one. `token lapsed, use it in Desktop to renew` replaces the old `token expired` text when the saved access token has passed its expiry, `token refused, sign in and re-save` replaces it for a 401, and `no token saved, sign in and re-save` for a profile that holds no token for its account.
 
 ## 0.13.0 (2026-11-03)
 
@@ -179,7 +186,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.13.0/claude-multipass-app_0.13.0_arm64.dmg" length="3772717" type="application/octet-stream" sparkle:edSignature="woTOiB3WJ8X3nt4m6T06HNC9+d8UgY3ZI7gq34QBIaQC4kuwAo6d40RWVuM4kLguBG2JEL1LW6HzquUhFmD4BQ=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.14.0/claude-multipass-app_0.14.0_arm64.dmg" length="3775532" type="application/octet-stream" sparkle:edSignature="w1IkfYUpRGdZWyiEliixP2NVrGVyxFdJ/FOdgEPqa65E09P5mdwhMPp6UE5fkh1RRWTBF1x9tRLRvoEm4gLUAg=="/>
     </item>
   </channel>
 </rss>
