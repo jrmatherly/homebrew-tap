@@ -1,6 +1,6 @@
 cask "returnofthemac-app" do
-  version "0.1.0"
-  sha256 "49593c2ab1bb5675cabaa3c3192e4e6bb9c83be0dfbf7513ab4cd3af19112003"
+  version "0.1.1"
+  sha256 "b7c56999f387b7e14dabf1e6ab245614e2d1ff3107631f75e2fa97083567dc39"
 
   url "https://github.com/jrmatherly/returnofthemac/releases/download/app-v#{version}/returnofthemac-app_#{version}_arm64.dmg"
   name "Return of the Mac"
