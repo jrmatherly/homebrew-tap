@@ -3,10 +3,14 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.14.1</title>
-      <sparkle:version>0.14.1</sparkle:version>
+      <title>0.15.0</title>
+      <sparkle:version>0.15.0</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.15.0 (2026-11-16)
+
+- The app's Update and relaunch button now works when mise installed the cask. It runs `mise bootstrap packages upgrade` for the tool and the app, and About says `Updates with mise`. Before, on a Mac with no `brew`, the button said `Homebrew installed this app, but brew was not found`.
 
 ## 0.14.1 (2026-11-16)
 
@@ -199,7 +203,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.14.1/claude-multipass-app_0.14.1_arm64.dmg" length="3778166" type="application/octet-stream" sparkle:edSignature="OcNyXaqEAc2vY4w7J7WKWIda1Ct313NAFy/Fmff8EGNdI2hvYkDMDAnEmijCAF25k+HGknU+l2jcs+DkDhmCDg=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.15.0/claude-multipass-app_0.15.0_arm64.dmg" length="3803532" type="application/octet-stream" sparkle:edSignature="Q+3yW9QxO8rlxQ1liFyCUZe//J+vXrepxeXDBkAg493LVOwoWJxC/qAYUeVpw7EMDBffblVTH3vLiFII+rrKCg=="/>
     </item>
   </channel>
 </rss>
