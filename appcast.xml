@@ -3,10 +3,23 @@
   <channel>
     <title>Claude Multipass</title>
     <item>
-      <title>0.14.0</title>
-      <sparkle:version>0.14.0</sparkle:version>
+      <title>0.14.1</title>
+      <sparkle:version>0.14.1</sparkle:version>
       <sparkle:minimumSystemVersion>14.0.0</sparkle:minimumSystemVersion>
       <description sparkle:format="markdown"><![CDATA[# Changelog
+
+## 0.14.1 (2026-11-16)
+
+- Turning "Show usage" off and on again within 30 seconds no longer reads usage a second time. The toggle now shares the Refresh button's 30 second floor.
+- The popover's Refresh button is disabled while a refresh runs.
+- Settings re-reads the "Launch at login" state each time its window comes forward, so a login item removed in System Settings shows as off.
+- A profile's CLI identity file (`cli.json`) that cannot be written now keeps its old contents and warns `could not write`. Before, the write could fail without a word and leave an empty file, and the next switch to that profile then cleared the account from `~/.claude.json`.
+- `switch` no longer restores a CLI login from an identity file that is empty or names no account. It warns `the saved CLI identity for <name> is unreadable; run claude auth login, then save <name>` and switches Desktop only.
+- `save` no longer stores a Claude Code Keychain item that holds no login (shared MCP keys only). It warns `the live CLI login holds no tokens` and keeps the profile's saved CLI login.
+- A switch that cannot make or fill its backup folder now warns `could not back up the current login; switched Desktop only` and removes the partial folder. Before, a same-account switch printed `Backed up the current login` for a backup it had not made.
+- A `switch` whose cookie copy or `config.json` write fails now leaves the login it found and says where the backup is (`could not copy <name>'s cookies; the previous login is in <folder>`, `could not write <config.json>; the previous login is in <folder>`). Before, a failed cookie copy left Desktop with the new account's token and the old account's cookies, and a retry reported `already signed in` without repairing it. A run that is killed between the two writes is still not repaired.
+- `switch` no longer writes a saved CLI login that holds no tokens over the live one. It warns `the saved CLI login for <name> holds no tokens; run claude auth login, then save <name>`.
+- The Raycast usage command shows the profile's name while an LLM Router profile is running. Before, it showed an error on every refresh. When the account list cannot be read it says `could not read the account list`.
 
 ## 0.14.0 (2026-11-03)
 
@@ -186,7 +199,7 @@ First release as its own project. The tool lived as `bin/claude-desktop-account`
 - Renamed to `claude-multipass`; the profile store moves from `~/.config/dotfiles/claude-desktop-accounts` to `~/.config/claude-multipass/profiles` (with `backups/` beside it) once, automatically, on the first run that finds the old store.
 - `XDG_CONFIG_HOME` is honoured for the store's default parent.
 - The Raycast scripts call `claude-multipass` by name, with Homebrew's bin on PATH for Apple Silicon and Intel. Copy them to `~/.config/claude-multipass/raycast` before adding them to Raycast; the Homebrew `share` path changes on upgrade.]]></description>
-      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.14.0/claude-multipass-app_0.14.0_arm64.dmg" length="3775532" type="application/octet-stream" sparkle:edSignature="w1IkfYUpRGdZWyiEliixP2NVrGVyxFdJ/FOdgEPqa65E09P5mdwhMPp6UE5fkh1RRWTBF1x9tRLRvoEm4gLUAg=="/>
+      <enclosure url="https://github.com/jrmatherly/claude-multipass/releases/download/v0.14.1/claude-multipass-app_0.14.1_arm64.dmg" length="3778166" type="application/octet-stream" sparkle:edSignature="OcNyXaqEAc2vY4w7J7WKWIda1Ct313NAFy/Fmff8EGNdI2hvYkDMDAnEmijCAF25k+HGknU+l2jcs+DkDhmCDg=="/>
     </item>
   </channel>
 </rss>
