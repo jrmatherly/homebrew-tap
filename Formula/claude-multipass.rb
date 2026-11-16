@@ -1,8 +1,8 @@
 class ClaudeMultipass < Formula
   desc "Switch Claude Desktop between claude.ai accounts without an email code"
   homepage "https://github.com/jrmatherly/claude-multipass"
-  url "https://github.com/jrmatherly/claude-multipass/archive/refs/tags/v0.15.0.tar.gz"
-  sha256 "57cf97cdbd7324661a2ba0007ba7476e484e032ddbf2832a31422f28c2463a2a"
+  url "https://github.com/jrmatherly/claude-multipass/archive/refs/tags/v0.15.1.tar.gz"
+  sha256 "d055b8a8b258a335ff3f758b34ce9da7911e88682a850db34ce53d9a53941048"
   license "MIT"
   head "https://github.com/jrmatherly/claude-multipass.git", branch: "main"
 
